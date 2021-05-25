@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="Programa.Views.PersonasPage"
+    Style="{DynamicResource MahApps.Styles.Page}"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:properties="clr-namespace:Programa.Properties"
+    mc:Ignorable="d"
+    d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBlock
+            Style="{StaticResource PageTitleStyle}"
+            Margin="{StaticResource MediumLeftMargin}"
+            Text="Air Canadá Center System" />
+        <Grid
+            Grid.Row="1"
+            Margin="{StaticResource MediumLeftRightMargin}"
+            Background="{DynamicResource MahApps.Brushes.Gray10}">
+            <StackPanel>
+                <TextBlock Text="Integrantes del grupo" Margin="10" FontSize="18" />
+                <TextBlock Text="20161003850 Andres Alberto Zuniga" Margin="10,0" FontSize="15" />
+                <TextBlock Text="20121008497 Daniel Antonio Artica" Margin="10,0" FontSize="15" />
+                <TextBlock Text="20161000031 Daniel Alessandro Arteaga" Margin="10,0" FontSize="15" />
+                <TextBlock Text="20151003893 David Alexander Enamorado" Margin="10,0" FontSize="15" />
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

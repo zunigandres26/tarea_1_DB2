@@ -1,9 +1,0 @@
-C:\Users\andre\Documents\Github\tarea_1_DB2\Programa.Core\bin\Debug\netstandard2.0\Programa.Core.deps.json
-C:\Users\andre\Documents\Github\tarea_1_DB2\Programa.Core\bin\Debug\netstandard2.0\Programa.Core.dll
-C:\Users\andre\Documents\Github\tarea_1_DB2\Programa.Core\bin\Debug\netstandard2.0\Programa.Core.pdb
-C:\Users\andre\Documents\Github\tarea_1_DB2\Programa.Core\obj\Debug\netstandard2.0\Programa.Core.csprojAssemblyReference.cache
-C:\Users\andre\Documents\Github\tarea_1_DB2\Programa.Core\obj\Debug\netstandard2.0\Programa.Core.AssemblyInfoInputs.cache
-C:\Users\andre\Documents\Github\tarea_1_DB2\Programa.Core\obj\Debug\netstandard2.0\Programa.Core.AssemblyInfo.cs
-C:\Users\andre\Documents\Github\tarea_1_DB2\Programa.Core\obj\Debug\netstandard2.0\Programa.Core.csproj.CoreCompileInputs.cache
-C:\Users\andre\Documents\Github\tarea_1_DB2\Programa.Core\obj\Debug\netstandard2.0\Programa.Core.dll
-C:\Users\andre\Documents\Github\tarea_1_DB2\Programa.Core\obj\Debug\netstandard2.0\Programa.Core.pdb

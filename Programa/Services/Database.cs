@@ -61,6 +61,11 @@ namespace Applicacion.Services
         {
             return Data.Query<Paises>("SELECT * FROM Paises");
         }
+        public Paises getPais( int id)
+        {
+            Paises pais =  Data.Find<Paises>($"SELECT * FROM Paises where id_pais = {id}");
+            return pais;
+        }
         public List<Tipo_Persona> getTipo_Persona()
         {
             return Data.Query<Tipo_Persona>("SELECT * FROM Tipo_Persona");

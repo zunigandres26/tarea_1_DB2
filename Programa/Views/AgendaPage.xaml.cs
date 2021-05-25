@@ -73,6 +73,7 @@ namespace Programa.Views
         private void ShowCreatePanel(object sender, System.Windows.RoutedEventArgs e)
         {
             nuevo.Visibility = System.Windows.Visibility.Visible;
+            vista.Visibility = System.Windows.Visibility.Collapsed;
             tipo_persona.ItemsSource = db.getTipo_Persona();
             paisesList.ItemsSource = db.getPaises();
         }
@@ -86,7 +87,7 @@ namespace Programa.Views
                 db.createPersona(identificacion.Text, primerNombre.Text, segundoNombre.Text, primerApellido.Text, segundoApellido.Text, pais, tipo);
                 personasList.ItemsSource = null;
                 personasList.ItemsSource = db.getPersonas();
-                nuevo.Visibility = System.Windows.Visibility.Collapsed;
+                nuevo.Visibility = System.Windows.Visibility.Collapsed;                
             }            
         }
 
@@ -101,7 +102,33 @@ namespace Programa.Views
 
         private void personasList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Personas select = (Personas)e.AddedItems[0];
+            if (e.AddedItems[0] != null)
+            {
+                Personas select = (Personas)e.AddedItems[0];
+                nuevo.Visibility = System.Windows.Visibility.Collapsed;
+                vista.Visibility = System.Windows.Visibility.Visible;
+
+                viewid.Text = select.identificacion;
+                viewpn.Text = select.primer_nombre;
+                viewsn.Text = select.segundo_nombre;
+                viewpa.Text = select.primer_apellido;
+                viewsa.Text = select.segundo_apellido;
+                paisdeorigen.Text = "Pais de origen: " + db.getPais(select.id_pais_origen).nombre_pais;
+            }
+        }
+
+        private void Button_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            NewPhone.Visibility = System.Windows.Visibility.Visible;
+            TelefonosView.Visibility = System.Windows.Visibility.Collapsed;
+            paisesList2.ItemsSource = null;
+            paisesList2.ItemsSource = db.getPersonas();
+        }
+
+        private void viewTelefonos(object sender, System.Windows.RoutedEventArgs e)
+        {
+            NewPhone.Visibility = System.Windows.Visibility.Collapsed;
+            TelefonosView.Visibility = System.Windows.Visibility.Visible;
         }
     }
 }

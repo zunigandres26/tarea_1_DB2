@@ -10,7 +10,7 @@
     d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition MinWidth="180" MaxWidth="300" Width="*" />
+            <ColumnDefinition Width="260" />
             <ColumnDefinition Width="2*" />
         </Grid.ColumnDefinitions>
         <Grid>
@@ -45,7 +45,7 @@
                 </ListView.ItemTemplate>
             </ListView>
         </Grid>
-        <StackPanel x:Name="nuevo" Grid.Column="1" Visibility="Collapsed" Orientation="Vertical" HorizontalAlignment="Left" Margin="15">
+        <StackPanel x:Name="nuevo" Grid.Column="1" Visibility="Collapsed" Orientation="Vertical" HorizontalAlignment="Left" Margin="20">
             <TextBlock>Identificacion</TextBlock>
             <TextBox Name="identificacion" Width="200" MaxLength="12"/>
             <TextBlock>Primer Nombre</TextBlock>
@@ -60,7 +60,7 @@
             <ComboBox Name="paisesList" Width="200" SelectionChanged="paisSeleccionCrear" >
                 <ComboBox.ItemTemplate>
                     <DataTemplate>
-                        <TextBlock Text="{Binding nombre_pais}"></TextBlock>
+                        <TextBlock Text="{Binding nombre_pais}"/>
                     </DataTemplate>
                 </ComboBox.ItemTemplate>
             </ComboBox>
@@ -74,18 +74,45 @@
             </ComboBox>
             <Button Margin="0,20" Click="saveCreate" >Guardar</Button>
         </StackPanel>
-        <StackPanel x:Name="vista" Grid.Column="1" Visibility="Collapsed">
-            <TextBlock>Identificacion</TextBlock>
-            <TextBox Name="viewid" Width="200" MaxLength="12"/>
-            <TextBlock>Primer Nombre</TextBlock>
-            <TextBox Name="viewpn" Width="200" MaxLength="50"/>
-            <TextBlock>Segundo Nombre</TextBlock>
-            <TextBox Name="viewsn" Width="200" MaxLength="50"/>
-            <TextBlock>Primer Apellido</TextBlock>
-            <TextBox Name="viewpa" Width="200" MaxLength="50"/>
-            <TextBlock>Segundo Apellido</TextBlock>
-            <TextBox Name="viewsa" Width="200" MaxLength="50"/>
-            <TextBlock>Pais de Origen</TextBlock>
+        <StackPanel x:Name="vista" Grid.Column="1" Visibility="Visible" Orientation="Horizontal" Margin="20">
+            <StackPanel Margin="0,40,0,0" Orientation="Vertical" HorizontalAlignment="Left">
+                <TextBlock>Identificacion</TextBlock>
+                <TextBox Name="viewid" Width="200" MaxLength="12"/>
+                <TextBlock>Primer Nombre</TextBlock>
+                <TextBox Name="viewpn" Width="200" MaxLength="50"/>
+                <TextBlock>Segundo Nombre</TextBlock>
+                <TextBox Name="viewsn" Width="200" MaxLength="50"/>
+                <TextBlock>Primer Apellido</TextBlock>
+                <TextBox Name="viewpa" Width="200" MaxLength="50"/>
+                <TextBlock>Segundo Apellido</TextBlock>
+                <TextBox Name="viewsa" Width="200" MaxLength="50"/>
+                <TextBlock x:Name="paisdeorigen">Pais de Origen</TextBlock>
+            </StackPanel>
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="20,0">
+                    <Button Width="100" Content="Telefonos" Click="viewTelefonos" />
+                    <Button Margin="20,0" Width="100" Content="Nuevo Telefono" Click="Button_Click" />
+                </StackPanel>
+                <ListView Name="TelefonosView">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding viewTelefono}"/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <StackPanel Name="NewPhone" Visibility="Collapsed" HorizontalAlignment="Center">
+                    <ComboBox Name="paisesList2" Width="220" Margin="0,30,20,0">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding nombre_pais}"></TextBlock>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    <TextBlock Text="Numero de Telefono"/>
+                    <TextBox Width="220" Margin="0,0,20,0"></TextBox>
+                    <Button Width="100" Margin="0,20,20,0" Content="Guardar"/>
+                </StackPanel>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Page>

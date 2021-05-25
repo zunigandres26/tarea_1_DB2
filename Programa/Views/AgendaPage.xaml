@@ -25,7 +25,7 @@
             <ListView
                 Grid.Row="1"
                 Name="personasList"
-                SelectedItem="{Binding Selected, Mode=TwoWay}">
+                SelectedItem="{Binding Selected, Mode=TwoWay}" SelectionChanged="personasList_SelectionChanged"  >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <Grid Height="60">

@@ -99,5 +99,9 @@ namespace Programa.Views
             _tipo_persona = (Tipo_Persona)e.AddedItems[0];
         }
 
+        private void personasList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Personas select = (Personas)e.AddedItems[0];
+        }
     }
 }
